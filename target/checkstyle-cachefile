@@ -1,0 +1,4 @@
+#Thu Jun 12 19:20:39 CEST 2025
+configuration*?=782D046303D0186311CF33019437F6517E872B08
+module-resource*?\:checkstyle-suppressions.xml=C5218CD00617B2AA7A5C966B123D6A2B667DC314
+module-resource*?\:checkstyle-xpath-suppressions.xml=14336D7996B6E6CC30561D1CF4E1B0DF286747A6

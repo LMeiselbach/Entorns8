@@ -1,0 +1,14 @@
+bbdd\GestionJugadores.class
+bbdd\Jugador.class
+bbdd\Partido.class
+bbdd\JugadorPersistente.class
+bbdd\GestionPartidoPersistente.class
+bbdd\PartidoPersistente.class
+bbdd\GestionJugadorPersistente.class
+bbdd\main.class
+bbdd\Equipo.class
+bbdd\GestionEquipoPersistente.class
+bbdd\GestionEquipos.class
+bbdd\BBDD.class
+bbdd\EquipoPersistente.class
+bbdd\GestionPartidos.class

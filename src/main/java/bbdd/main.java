@@ -6,7 +6,8 @@ import java.util.*;
 
 public class main {
  public static void main(String[] args) {
-     Scanner sc = new Scanner(System.in);
+     Scanner sc = new Scanner(System.in, "UTF-8");
+
      int opcion;
      do {
          System.out.println("\n--- MENÚ PRINCIPAL ---");
@@ -22,7 +23,11 @@ public class main {
              case 1: menuEquipos(sc); break;
              case 2: menuJugadores(sc); break;
              case 3: menuPartidos(sc); break;
+             default:
+                 System.out.println("Opción no válida. Por favor, elige una opción correcta.");
+                 break;
          }
+
      } while (opcion != 0);
      sc.close();
  }
@@ -63,7 +68,9 @@ public class main {
                  int id = sc.nextInt();
                  BBDD.eliminarEquipo(id);
              }
+
          }
+
      } while (opcion != 0);
  }
 

@@ -1,0 +1,15 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+project,bbdd,BBDD,427,0,6,0,142,0,18,0,15,0
+project,bbdd,EquipoPersistente,15,51,2,6,3,16,5,8,3,6
+project,bbdd,Equipo,23,21,0,0,5,8,5,4,5,4
+project,bbdd,PartidoPersistente,17,64,1,7,3,22,4,11,3,8
+project,bbdd,GestionPartidos,31,76,9,7,6,15,9,8,3,6
+project,bbdd,main,383,0,27,0,118,0,24,0,5,0
+project,bbdd,GestionJugadorPersistente,9,78,4,8,3,14,5,8,1,6
+project,bbdd,Jugador,29,27,0,0,6,10,6,5,6,5
+project,bbdd,GestionJugadores,29,78,8,8,7,14,9,8,3,6
+project,bbdd,JugadorPersistente,17,64,1,7,3,22,4,11,3,8
+project,bbdd,Partido,29,27,0,0,6,10,6,5,6,5
+project,bbdd,GestionEquipos,37,70,9,7,7,14,10,7,4,5
+project,bbdd,GestionEquipoPersistente,6,77,4,6,1,11,4,8,0,7
+project,bbdd,GestionPartidoPersistente,6,78,4,8,2,13,4,8,0,6

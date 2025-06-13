@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GestionPartidoPersistente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">GestionPartidoPersistente.java</span></div><h1>GestionPartidoPersistente.java</h1><pre class="source lang-java linenums">package bbdd;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="fc" id="L6">public class GestionPartidoPersistente {</span>
+<span class="fc" id="L7">    private List&lt;PartidoPersistente&gt; partidos = new ArrayList&lt;&gt;();</span>
+    /**
+     * Método add.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * add: Descripción general del método.
+ * @param p Descripción del parámetro p.
+     */
+    public boolean add(PartidoPersistente p) {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (getById(p.getId()) != null) return false;</span>
+<span class="fc" id="L19">        partidos.add(p);</span>
+<span class="fc" id="L20">        return true;</span>
+    }
+    /**
+     * Método getById.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getById: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public PartidoPersistente getById(int id) {
+<span class="fc bfc" id="L32" title="All 2 branches covered.">        for (PartidoPersistente p : partidos) {</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">            if (p.getId() == id) return p;</span>
+<span class="nc" id="L34">        }</span>
+<span class="fc" id="L35">        return null;</span>
+    }
+    /**
+     * Método replace.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * replace: Descripción general del método.
+ * @param nuevo Descripción del parámetro nuevo.
+     */
+    public boolean replace(PartidoPersistente nuevo) {
+<span class="pc bpc" id="L47" title="1 of 2 branches missed.">        for (int i = 0; i &lt; partidos.size(); i++) {</span>
+<span class="pc bpc" id="L48" title="1 of 2 branches missed.">            if (partidos.get(i).getId() == nuevo.getId()) {</span>
+<span class="fc" id="L49">                partidos.set(i, nuevo);</span>
+<span class="fc" id="L50">                return true;</span>
+            }
+        }
+<span class="nc" id="L53">        return false;</span>
+    }
+    /**
+     * Método remove.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * remove: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public boolean remove(int id) {
+<span class="pc bpc" id="L65" title="1 of 2 branches missed.">        return partidos.removeIf(p -&gt; p.getId() == id);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

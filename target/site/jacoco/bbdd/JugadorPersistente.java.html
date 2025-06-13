@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>JugadorPersistente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">JugadorPersistente.java</span></div><h1>JugadorPersistente.java</h1><pre class="source lang-java linenums">package bbdd;
+
+public class JugadorPersistente {
+    private int id;
+    private String nombre;
+    private int edad;
+    private int equipoId;
+
+<span class="nc" id="L9">    public JugadorPersistente() {}</span>
+
+<span class="fc" id="L11">    public JugadorPersistente(int id, String nombre, int edad, int equipoId) {</span>
+<span class="fc" id="L12">        this.id = id;</span>
+<span class="fc" id="L13">        setNombre(nombre);</span>
+<span class="fc" id="L14">        setEdad(edad);</span>
+<span class="fc" id="L15">        setEquipoId(equipoId);</span>
+<span class="fc" id="L16">    }</span>
+    /**
+     * Método getId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getId: Descripción general del método.
+     */
+<span class="fc" id="L25">    public int getId() { return id; }</span>
+    /**
+     * Método setId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setId: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+<span class="nc" id="L35">    public void setId(int id) { this.id = id; }</span>
+    /**
+     * Método getNombre.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getNombre: Descripción general del método.
+     */
+<span class="fc" id="L44">    public String getNombre() { return nombre; }</span>
+    /**
+     * Método setNombre.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setNombre: Descripción general del método.
+ * @param nombre Descripción del parámetro nombre.
+     */
+    public void setNombre(String nombre) {
+<span class="pc bpc" id="L55" title="1 of 4 branches missed.">        if (nombre == null || nombre.trim().isEmpty()) {</span>
+<span class="fc" id="L56">            throw new IllegalArgumentException(&quot;El nombre no puede estar vacío.&quot;);</span>
+        }
+<span class="fc" id="L58">        this.nombre = nombre;</span>
+<span class="fc" id="L59">    }</span>
+    /**
+     * Método getEdad.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getEdad: Descripción general del método.
+     */
+<span class="fc" id="L68">    public int getEdad() { return edad; }</span>
+    /**
+     * Método setEdad.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setEdad: Descripción general del método.
+ * @param edad Descripción del parámetro edad.
+     */
+    public void setEdad(int edad) {
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (edad &lt;= 0) {</span>
+<span class="fc" id="L80">            throw new IllegalArgumentException(&quot;La edad debe ser mayor que cero.&quot;);</span>
+        }
+<span class="fc" id="L82">        this.edad = edad;</span>
+<span class="fc" id="L83">    }</span>
+    /**
+     * Método getEquipoId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getEquipoId: Descripción general del método.
+     */
+<span class="fc" id="L92">    public int getEquipoId() { return equipoId; }</span>
+    /**
+     * Método setEquipoId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setEquipoId: Descripción general del método.
+ * @param equipoId Descripción del parámetro equipoId.
+     */
+    public void setEquipoId(int equipoId) {
+<span class="fc bfc" id="L103" title="All 2 branches covered.">        if (equipoId &lt;= 0) {</span>
+<span class="fc" id="L104">            throw new IllegalArgumentException(&quot;El equipoId debe ser mayor que cero.&quot;);</span>
+        }
+<span class="fc" id="L106">        this.equipoId = equipoId;</span>
+<span class="fc" id="L107">    }</span>
+
+    @Override
+    /**
+     * Método toString.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * toString: Descripción general del método.
+     */
+    public String toString() {
+<span class="nc" id="L119">        return id + &quot;: &quot; + nombre + &quot; (&quot; + edad + &quot; años, equipo: &quot; + equipoId + &quot;)&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

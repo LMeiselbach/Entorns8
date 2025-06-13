@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PartidoPersistente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">PartidoPersistente.java</span></div><h1>PartidoPersistente.java</h1><pre class="source lang-java linenums">package bbdd;
+
+public class PartidoPersistente {
+    private int id;
+    private int equipoLocal;
+    private int equipoVisitante;
+    private String fecha;
+
+<span class="nc" id="L9">    public PartidoPersistente() {}</span>
+
+<span class="fc" id="L11">    public PartidoPersistente(int id, int equipoLocal, int equipoVisitante, String fecha) {</span>
+<span class="fc" id="L12">        this.id = id;</span>
+<span class="fc" id="L13">        setEquipoLocal(equipoLocal);</span>
+<span class="fc" id="L14">        setEquipoVisitante(equipoVisitante);</span>
+<span class="fc" id="L15">        setFecha(fecha);</span>
+<span class="fc" id="L16">    }</span>
+    /**
+     * Método getId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getId: Descripción general del método.
+     */
+<span class="fc" id="L25">    public int getId() { return id; }</span>
+    /**
+     * Método setId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setId: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+<span class="nc" id="L35">    public void setId(int id) { this.id = id; }</span>
+    /**
+     * Método getEquipoLocal.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getEquipoLocal: Descripción general del método.
+     */
+<span class="fc" id="L44">    public int getEquipoLocal() { return equipoLocal; }</span>
+    /**
+     * Método setEquipoLocal.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setEquipoLocal: Descripción general del método.
+ * @param equipoLocal Descripción del parámetro equipoLocal.
+     */
+    public void setEquipoLocal(int equipoLocal) {
+<span class="fc bfc" id="L55" title="All 2 branches covered.">        if (equipoLocal &lt;= 0) {</span>
+<span class="fc" id="L56">            throw new IllegalArgumentException(&quot;El equipo local debe tener ID positivo.&quot;);</span>
+        }
+<span class="fc" id="L58">        this.equipoLocal = equipoLocal;</span>
+<span class="fc" id="L59">    }</span>
+    /**
+     * Método getEquipoVisitante.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getEquipoVisitante: Descripción general del método.
+     */
+<span class="fc" id="L68">    public int getEquipoVisitante() { return equipoVisitante; }</span>
+    /**
+     * Método setEquipoVisitante.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setEquipoVisitante: Descripción general del método.
+ * @param equipoVisitante Descripción del parámetro equipoVisitante.
+     */
+    public void setEquipoVisitante(int equipoVisitante) {
+<span class="fc bfc" id="L79" title="All 2 branches covered.">        if (equipoVisitante &lt;= 0) {</span>
+<span class="fc" id="L80">            throw new IllegalArgumentException(&quot;El equipo visitante debe tener ID positivo.&quot;);</span>
+        }
+<span class="fc" id="L82">        this.equipoVisitante = equipoVisitante;</span>
+<span class="fc" id="L83">    }</span>
+    /**
+     * Método getFecha.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getFecha: Descripción general del método.
+     */
+<span class="fc" id="L92">    public String getFecha() { return fecha; }</span>
+    /**
+     * Método setFecha.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setFecha: Descripción general del método.
+ * @param fecha Descripción del parámetro fecha.
+     */
+    public void setFecha(String fecha) {
+<span class="pc bpc" id="L103" title="1 of 4 branches missed.">        if (fecha == null || fecha.trim().isEmpty()) {</span>
+<span class="fc" id="L104">            throw new IllegalArgumentException(&quot;La fecha no puede estar vacía.&quot;);</span>
+        }
+<span class="fc" id="L106">        this.fecha = fecha;</span>
+<span class="fc" id="L107">    }</span>
+
+    @Override
+    /**
+     * Método toString.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * toString: Descripción general del método.
+     */
+    public String toString() {
+<span class="nc" id="L119">        return id + &quot;: &quot; + equipoLocal + &quot; vs &quot; + equipoVisitante + &quot; en &quot; + fecha;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

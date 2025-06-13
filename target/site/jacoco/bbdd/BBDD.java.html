@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BBDD.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">BBDD.java</span></div><h1>BBDD.java</h1><pre class="source lang-java linenums">package bbdd;
+	
+import java.sql.*;
+import java.util.*;
+
+<span class="nc" id="L6">public class BBDD {</span>
+    private static final String URL = &quot;jdbc:mysql://localhost:3306/Torneo&quot;;
+    private static final String USER = &quot;root&quot;;
+    private static final String PASS = &quot;root&quot;;
+    
+
+
+    public static Connection conectar() throws SQLException {
+<span class="nc" id="L14">        return DriverManager.getConnection(URL, USER, PASS);</span>
+    }
+
+    public static void mostrarError(SQLException e) {
+<span class="nc" id="L18">        System.out.println(&quot;Error SQL: &quot; + e.getMessage());</span>
+<span class="nc" id="L19">    }</span>
+
+    // --- CRUD EQUIPO ---
+    public static boolean insertarEquipo(Equipo eq) {
+<span class="nc" id="L23">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L24">            String sql = &quot;INSERT INTO equipo (nombre, ciudad) VALUES (?, ?)&quot;;</span>
+<span class="nc" id="L25">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L26">            stmt.setString(1, eq.getNombre());</span>
+<span class="nc" id="L27">            stmt.setString(2, eq.getCiudad());</span>
+<span class="nc" id="L28">            stmt.executeUpdate();</span>
+<span class="nc" id="L29">            return true;</span>
+<span class="nc" id="L30">        } catch (SQLException e) {</span>
+<span class="nc" id="L31">            mostrarError(e);</span>
+<span class="nc" id="L32">            return false;</span>
+        }
+    }
+
+    public static boolean actualizarEquipo(Equipo eq) {
+<span class="nc" id="L37">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L38">            String sql = &quot;UPDATE equipo SET nombre=?, ciudad=? WHERE id=?&quot;;</span>
+<span class="nc" id="L39">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L40">            stmt.setString(1, eq.getNombre());</span>
+<span class="nc" id="L41">            stmt.setString(2, eq.getCiudad());</span>
+<span class="nc" id="L42">            stmt.setInt(3, eq.getId());</span>
+<span class="nc" id="L43">            stmt.executeUpdate();</span>
+<span class="nc" id="L44">            return true;</span>
+<span class="nc" id="L45">        } catch (SQLException e) {</span>
+<span class="nc" id="L46">            mostrarError(e);</span>
+<span class="nc" id="L47">            return false;</span>
+        }
+    }
+
+    public static boolean eliminarEquipo(int id) {
+<span class="nc" id="L52">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L53">            String sql = &quot;DELETE FROM equipo WHERE id=?&quot;;</span>
+<span class="nc" id="L54">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L55">            stmt.setInt(1, id);</span>
+<span class="nc" id="L56">            stmt.executeUpdate();</span>
+<span class="nc" id="L57">            return true;</span>
+<span class="nc" id="L58">        } catch (SQLException e) {</span>
+<span class="nc" id="L59">            mostrarError(e);</span>
+<span class="nc" id="L60">            return false;</span>
+        }
+    }
+
+    public static List&lt;Equipo&gt; listarEquipos() {
+<span class="nc" id="L65">        List&lt;Equipo&gt; lista = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L66">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L67">            String sql = &quot;SELECT * FROM equipo&quot;;</span>
+<span class="nc" id="L68">            Statement stmt = conn.createStatement();</span>
+<span class="nc" id="L69">            ResultSet rs = stmt.executeQuery(sql);</span>
+<span class="nc bnc" id="L70" title="All 2 branches missed.">            while (rs.next()) {</span>
+<span class="nc" id="L71">                lista.add(new Equipo(</span>
+<span class="nc" id="L72">                    rs.getInt(&quot;id&quot;),</span>
+<span class="nc" id="L73">                    rs.getString(&quot;nombre&quot;),</span>
+<span class="nc" id="L74">                    rs.getString(&quot;ciudad&quot;)</span>
+                ));
+            }
+<span class="nc" id="L77">        } catch (SQLException e) {</span>
+<span class="nc" id="L78">            mostrarError(e);</span>
+<span class="nc" id="L79">        }</span>
+<span class="nc" id="L80">        return lista;</span>
+    }
+
+    // --- CRUD JUGADOR ---
+    public static boolean insertarJugador(Jugador j) {
+<span class="nc" id="L85">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L86">            String sql = &quot;INSERT INTO jugador (nombre, edad, equipo_id) VALUES (?, ?, ?)&quot;;</span>
+<span class="nc" id="L87">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L88">            stmt.setString(1, j.getNombre());</span>
+<span class="nc" id="L89">            stmt.setInt(2, j.getEdad());</span>
+<span class="nc" id="L90">            stmt.setInt(3, j.getEquipoId());</span>
+<span class="nc" id="L91">            stmt.executeUpdate();</span>
+<span class="nc" id="L92">            return true;</span>
+<span class="nc" id="L93">        } catch (SQLException e) {</span>
+<span class="nc" id="L94">            mostrarError(e);</span>
+<span class="nc" id="L95">            return false;</span>
+        }
+    }
+
+    public static boolean actualizarJugador(Jugador j) {
+<span class="nc" id="L100">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L101">            String sql = &quot;UPDATE jugador SET nombre=?, edad=?, equipo_id=? WHERE id=?&quot;;</span>
+<span class="nc" id="L102">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L103">            stmt.setString(1, j.getNombre());</span>
+<span class="nc" id="L104">            stmt.setInt(2, j.getEdad());</span>
+<span class="nc" id="L105">            stmt.setInt(3, j.getEquipoId());</span>
+<span class="nc" id="L106">            stmt.setInt(4, j.getId());</span>
+<span class="nc" id="L107">            stmt.executeUpdate();</span>
+<span class="nc" id="L108">            return true;</span>
+<span class="nc" id="L109">        } catch (SQLException e) {</span>
+<span class="nc" id="L110">            mostrarError(e);</span>
+<span class="nc" id="L111">            return false;</span>
+        }
+    }
+
+    public static boolean eliminarJugador(int id) {
+<span class="nc" id="L116">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L117">            String sql = &quot;DELETE FROM jugador WHERE id=?&quot;;</span>
+<span class="nc" id="L118">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L119">            stmt.setInt(1, id);</span>
+<span class="nc" id="L120">            stmt.executeUpdate();</span>
+<span class="nc" id="L121">            return true;</span>
+<span class="nc" id="L122">        } catch (SQLException e) {</span>
+<span class="nc" id="L123">            mostrarError(e);</span>
+<span class="nc" id="L124">            return false;</span>
+        }
+    }
+
+    public static List&lt;Jugador&gt; listarJugadores() {
+<span class="nc" id="L129">        List&lt;Jugador&gt; lista = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L130">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L131">            String sql = &quot;SELECT * FROM jugador&quot;;</span>
+<span class="nc" id="L132">            Statement stmt = conn.createStatement();</span>
+<span class="nc" id="L133">            ResultSet rs = stmt.executeQuery(sql);</span>
+<span class="nc bnc" id="L134" title="All 2 branches missed.">            while (rs.next()) {</span>
+<span class="nc" id="L135">                lista.add(new Jugador(</span>
+<span class="nc" id="L136">                    rs.getInt(&quot;id&quot;),</span>
+<span class="nc" id="L137">                    rs.getString(&quot;nombre&quot;),</span>
+<span class="nc" id="L138">                    rs.getInt(&quot;edad&quot;),</span>
+<span class="nc" id="L139">                    rs.getInt(&quot;equipo_id&quot;)</span>
+                ));
+            }
+<span class="nc" id="L142">        } catch (SQLException e) {</span>
+<span class="nc" id="L143">            mostrarError(e);</span>
+<span class="nc" id="L144">        }</span>
+<span class="nc" id="L145">        return lista;</span>
+    }
+
+    // --- CRUD PARTIDO ---
+    public static boolean insertarPartido(Partido p) {
+<span class="nc" id="L150">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L151">            String sql = &quot;INSERT INTO partido (equipo_local, equipo_visitante, fecha) VALUES (?, ?, ?)&quot;;</span>
+<span class="nc" id="L152">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L153">            stmt.setInt(1, p.getEquipoLocal());</span>
+<span class="nc" id="L154">            stmt.setInt(2, p.getEquipoVisitante());</span>
+<span class="nc" id="L155">            stmt.setString(3, p.getFecha());</span>
+<span class="nc" id="L156">            stmt.executeUpdate();</span>
+<span class="nc" id="L157">            return true;</span>
+<span class="nc" id="L158">        } catch (SQLException e) {</span>
+<span class="nc" id="L159">            mostrarError(e);</span>
+<span class="nc" id="L160">            return false;</span>
+        }
+    }
+
+    public static boolean actualizarPartido(Partido p) {
+<span class="nc" id="L165">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L166">            String sql = &quot;UPDATE partido SET equipo_local=?, equipo_visitante=?, fecha=? WHERE id=?&quot;;</span>
+<span class="nc" id="L167">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L168">            stmt.setInt(1, p.getEquipoLocal());</span>
+<span class="nc" id="L169">            stmt.setInt(2, p.getEquipoVisitante());</span>
+<span class="nc" id="L170">            stmt.setString(3, p.getFecha());</span>
+<span class="nc" id="L171">            stmt.setInt(4, p.getId());</span>
+<span class="nc" id="L172">            stmt.executeUpdate();</span>
+<span class="nc" id="L173">            return true;</span>
+<span class="nc" id="L174">        } catch (SQLException e) {</span>
+<span class="nc" id="L175">            mostrarError(e);</span>
+<span class="nc" id="L176">            return false;</span>
+        }
+    }
+
+    public static boolean eliminarPartido(int id) {
+<span class="nc" id="L181">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L182">            String sql = &quot;DELETE FROM partido WHERE id=?&quot;;</span>
+<span class="nc" id="L183">            PreparedStatement stmt = conn.prepareStatement(sql);</span>
+<span class="nc" id="L184">            stmt.setInt(1, id);</span>
+<span class="nc" id="L185">            stmt.executeUpdate();</span>
+<span class="nc" id="L186">            return true;</span>
+<span class="nc" id="L187">        } catch (SQLException e) {</span>
+<span class="nc" id="L188">            mostrarError(e);</span>
+<span class="nc" id="L189">            return false;</span>
+        }
+    }
+
+    public static List&lt;Partido&gt; listarPartidos() {
+<span class="nc" id="L194">        List&lt;Partido&gt; lista = new ArrayList&lt;&gt;();</span>
+<span class="nc" id="L195">        try (Connection conn = conectar()) {</span>
+<span class="nc" id="L196">            String sql = &quot;SELECT * FROM partido&quot;;</span>
+<span class="nc" id="L197">            Statement stmt = conn.createStatement();</span>
+<span class="nc" id="L198">            ResultSet rs = stmt.executeQuery(sql);</span>
+<span class="nc bnc" id="L199" title="All 2 branches missed.">            while (rs.next()) {</span>
+<span class="nc" id="L200">                lista.add(new Partido(</span>
+<span class="nc" id="L201">                    rs.getInt(&quot;id&quot;),</span>
+<span class="nc" id="L202">                    rs.getInt(&quot;equipo_local&quot;),</span>
+<span class="nc" id="L203">                    rs.getInt(&quot;equipo_visitante&quot;),</span>
+<span class="nc" id="L204">                    rs.getString(&quot;fecha&quot;)</span>
+                ));
+            }
+<span class="nc" id="L207">        } catch (SQLException e) {</span>
+<span class="nc" id="L208">            mostrarError(e);</span>
+<span class="nc" id="L209">        }</span>
+<span class="nc" id="L210">        return lista;</span>
+    }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>EquipoPersistente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">EquipoPersistente.java</span></div><h1>EquipoPersistente.java</h1><pre class="source lang-java linenums">package bbdd;
+
+public class EquipoPersistente {
+    private int id;
+    private String nombre;
+    private String ciudad;
+
+<span class="nc" id="L8">    public EquipoPersistente() {}</span>
+
+<span class="fc" id="L10">    public EquipoPersistente(int id, String nombre, String ciudad) {</span>
+<span class="fc" id="L11">        this.id = id;</span>
+<span class="fc" id="L12">        setNombre(nombre);</span>
+<span class="fc" id="L13">        setCiudad(ciudad);</span>
+<span class="fc" id="L14">    }</span>
+    /**
+     * Método getId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getId: Descripción general del método.
+     */
+<span class="fc" id="L23">    public int getId() { return id; }</span>
+    /**
+     * Método setId.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setId: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+<span class="nc" id="L33">    public void setId(int id) { this.id = id; }</span>
+    /**
+     * Método getNombre.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getNombre: Descripción general del método.
+     */
+<span class="fc" id="L42">    public String getNombre() { return nombre; }</span>
+    /**
+     * Método setNombre.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setNombre: Descripción general del método.
+ * @param nombre Descripción del parámetro nombre.
+     */
+    public void setNombre(String nombre) {
+<span class="pc bpc" id="L53" title="1 of 4 branches missed.">        if (nombre == null || nombre.trim().isEmpty()) {</span>
+<span class="fc" id="L54">            throw new IllegalArgumentException(&quot;El nombre no puede estar vacío.&quot;);</span>
+        }
+<span class="fc" id="L56">        this.nombre = nombre;</span>
+<span class="fc" id="L57">    }</span>
+    /**
+     * Método getCiudad.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getCiudad: Descripción general del método.
+     */
+<span class="fc" id="L66">    public String getCiudad() { return ciudad; }</span>
+    /**
+     * Método setCiudad.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * setCiudad: Descripción general del método.
+ * @param ciudad Descripción del parámetro ciudad.
+     */
+    public void setCiudad(String ciudad) {
+<span class="pc bpc" id="L77" title="1 of 4 branches missed.">        if (ciudad == null || ciudad.trim().isEmpty()) {</span>
+<span class="fc" id="L78">            throw new IllegalArgumentException(&quot;La ciudad no puede estar vacía.&quot;);</span>
+        }
+<span class="fc" id="L80">        this.ciudad = ciudad;</span>
+<span class="fc" id="L81">    }</span>
+
+    @Override
+    /**
+     * Método toString.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * toString: Descripción general del método.
+     */
+    public String toString() {
+<span class="nc" id="L93">        return id + &quot;: &quot; + nombre + &quot; (&quot; + ciudad + &quot;)&quot;;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

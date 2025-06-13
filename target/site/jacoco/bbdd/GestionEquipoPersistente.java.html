@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GestionEquipoPersistente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">GestionEquipoPersistente.java</span></div><h1>GestionEquipoPersistente.java</h1><pre class="source lang-java linenums">package bbdd;
+
+import java.util.ArrayList;
+import java.util.List;
+
+<span class="fc" id="L6">public class GestionEquipoPersistente {</span>
+<span class="fc" id="L7">    private List&lt;EquipoPersistente&gt; equipos = new ArrayList&lt;&gt;();</span>
+    /**
+     * Método add.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * add: Descripción general del método.
+ * @param e Descripción del parámetro e.
+     */
+    public boolean add(EquipoPersistente e) {
+<span class="fc bfc" id="L18" title="All 2 branches covered.">        if (getById(e.getId()) != null) return false;</span>
+<span class="fc" id="L19">        equipos.add(e);</span>
+<span class="fc" id="L20">        return true;</span>
+    }
+    /**
+     * Método getById.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getById: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public EquipoPersistente getById(int id) {
+<span class="pc bpc" id="L32" title="1 of 2 branches missed.">        return equipos.stream().filter(e -&gt; e.getId() == id).findFirst().orElse(null);</span>
+    }
+    /**
+     * Método replace.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * replace: Descripción general del método.
+ * @param nuevo Descripción del parámetro nuevo.
+     */
+    public boolean replace(EquipoPersistente nuevo) {
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">        for (int i = 0; i &lt; equipos.size(); i++) {</span>
+<span class="pc bpc" id="L45" title="1 of 2 branches missed.">            if (equipos.get(i).getId() == nuevo.getId()) {</span>
+<span class="fc" id="L46">                equipos.set(i, nuevo);</span>
+<span class="fc" id="L47">                return true;</span>
+            }
+        }
+<span class="nc" id="L50">        return false;</span>
+    }
+    /**
+     * Método remove.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * remove: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public boolean remove(int id) {
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">        return equipos.removeIf(e -&gt; e.getId() == id);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <checkstyle version="9.3">
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\BBDD.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\BBDD.java">
 <error line="1" severity="error" message="Falta el archivo package-info.java." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocPackageCheck"/>
 <error line="2" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="2" column="1" severity="error" message="Archivo contiene caracteres de tabulación (este es el primer ejemplo)." source="com.puppycrawl.tools.checkstyle.checks.whitespace.FileTabCharacterCheck"/>
@@ -47,7 +47,7 @@
 <error line="180" column="43" severity="error" message="El parámetro id debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 <error line="193" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\Equipo.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\Equipo.java">
 <error line="1" severity="error" message="El fichero no termina con un retorno de carro." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="4" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="5" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -101,7 +101,7 @@
 <error line="76" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="79" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\EquipoPersistente.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\EquipoPersistente.java">
 <error line="4" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="5" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="6" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -154,7 +154,7 @@
 <error line="86" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="89" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\GestionEquipoPersistente.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\GestionEquipoPersistente.java">
 <error line="7" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="8" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
 <error line="8" column="7" severity="error" message="El comentario coincide con el formato to-do &apos;TODO:&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
@@ -179,7 +179,7 @@
 <error line="61" severity="error" message="La etiqueta @return debe estar presente y tener una descripción." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="61" column="27" severity="error" message="El parámetro id debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\GestionEquipos.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\GestionEquipos.java">
 <error line="7" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="9" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 <error line="12" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
@@ -219,7 +219,7 @@
 <error line="100" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="106" severity="error" message="La etiqueta @return debe estar presente y tener una descripción." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\GestionJugadores.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\GestionJugadores.java">
 <error line="7" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="9" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 <error line="14" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
@@ -259,7 +259,7 @@
 <error line="114" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="120" severity="error" message="La etiqueta @return debe estar presente y tener una descripción." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\GestionJugadorPersistente.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\GestionJugadorPersistente.java">
 <error line="7" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="9" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 <error line="12" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
@@ -289,7 +289,7 @@
 <error line="73" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="79" severity="error" message="La etiqueta @return debe estar presente y tener una descripción." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\GestionPartidoPersistente.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\GestionPartidoPersistente.java">
 <error line="7" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="8" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
 <error line="8" column="7" severity="error" message="El comentario coincide con el formato to-do &apos;TODO:&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
@@ -314,7 +314,7 @@
 <error line="64" severity="error" message="La etiqueta @return debe estar presente y tener una descripción." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 <error line="64" column="27" severity="error" message="El parámetro id debería ser final." source="com.puppycrawl.tools.checkstyle.checks.FinalParametersCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\GestionPartidos.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\GestionPartidos.java">
 <error line="7" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="9" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.MissingJavadocMethodCheck"/>
 <error line="12" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
@@ -354,7 +354,7 @@
 <error line="100" severity="error" message="Line has trailing spaces." source="com.puppycrawl.tools.checkstyle.checks.regexp.RegexpSinglelineCheck"/>
 <error line="106" severity="error" message="La etiqueta @return debe estar presente y tener una descripción." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocMethodCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\Jugador.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\Jugador.java">
 <error line="1" severity="error" message="El fichero no termina con un retorno de carro." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="4" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="5" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -422,7 +422,7 @@
 <error line="103" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
 <error line="107" severity="error" message="La línea es mayor de 80 caracteres (encontrado 85)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\JugadorPersistente.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\JugadorPersistente.java">
 <error line="4" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="5" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="6" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -490,7 +490,7 @@
 <error line="115" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
 <error line="119" severity="error" message="La línea es mayor de 80 caracteres (encontrado 85)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\main.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\main.java">
 <error line="1" severity="error" message="El fichero no termina con un retorno de carro." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="5" column="17" severity="error" message="Usar la importación con &apos;.*&apos; debería evitarse - java.util.*." source="com.puppycrawl.tools.checkstyle.checks.imports.AvoidStarImportCheck"/>
 <error line="7" column="1" severity="error" message="Clases de servicios públicos no deben tener un constructor público o por defecto." source="com.puppycrawl.tools.checkstyle.checks.design.HideUtilityClassConstructorCheck"/>
@@ -518,7 +518,7 @@
 <error line="149" severity="error" message="La línea es mayor de 80 caracteres (encontrado 82)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 <error line="151" column="19" severity="error" message="&apos;4&apos; es un número mágico." source="com.puppycrawl.tools.checkstyle.checks.coding.MagicNumberCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\Partido.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\Partido.java">
 <error line="1" severity="error" message="El fichero no termina con un retorno de carro." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
 <error line="4" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="5" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
@@ -589,7 +589,7 @@
 <error line="100" column="5" severity="error" message="El comentario de Javadoc se coloca en la ubicación incorrecta." source="com.puppycrawl.tools.checkstyle.checks.javadoc.InvalidJavadocPositionCheck"/>
 <error line="104" severity="error" message="La línea es mayor de 80 caracteres (encontrado 83)." source="com.puppycrawl.tools.checkstyle.checks.sizes.LineLengthCheck"/>
 </file>
-<file name="C:\Users\lukas\Documents\2\src\main\java\bbdd\PartidoPersistente.java">
+<file name="C:\Users\Victor\OneDrive - EU Gimbernat\EntornsDesenvolupament\Ej8\Entorns8\src\main\java\bbdd\PartidoPersistente.java">
 <error line="4" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="5" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>
 <error line="6" column="5" severity="error" message="Falta el comentario Javadoc." source="com.puppycrawl.tools.checkstyle.checks.javadoc.JavadocVariableCheck"/>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GestionJugadorPersistente.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">GestionJugadorPersistente.java</span></div><h1>GestionJugadorPersistente.java</h1><pre class="source lang-java linenums">package bbdd;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GestionJugadorPersistente {
+    private List&lt;JugadorPersistente&gt; jugadores;
+
+<span class="fc" id="L9">    public GestionJugadorPersistente() {</span>
+<span class="fc" id="L10">        jugadores = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L11">    }</span>
+    /**
+     * Método add.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * add: Descripción general del método.
+ * @param j Descripción del parámetro j.
+     */
+    public boolean add(JugadorPersistente j) {
+<span class="fc bfc" id="L22" title="All 2 branches covered.">        if (getById(j.getId()) != null) return false;</span>
+<span class="fc" id="L23">        jugadores.add(j);</span>
+<span class="fc" id="L24">        return true;</span>
+    }
+    /**
+     * Método getById.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getById: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public JugadorPersistente getById(int id) {
+<span class="fc bfc" id="L36" title="All 2 branches covered.">        for (JugadorPersistente j : jugadores) {</span>
+<span class="pc bpc" id="L37" title="1 of 2 branches missed.">            if (j.getId() == id) return j;</span>
+<span class="nc" id="L38">        }</span>
+<span class="fc" id="L39">        return null;</span>
+    }
+    /**
+     * Método replace.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * replace: Descripción general del método.
+ * @param nuevo Descripción del parámetro nuevo.
+     */
+    public boolean replace(JugadorPersistente nuevo) {
+<span class="pc bpc" id="L51" title="1 of 2 branches missed.">        for (int i = 0; i &lt; jugadores.size(); i++) {</span>
+<span class="pc bpc" id="L52" title="1 of 2 branches missed.">            if (jugadores.get(i).getId() == nuevo.getId()) {</span>
+<span class="fc" id="L53">                jugadores.set(i, nuevo);</span>
+<span class="fc" id="L54">                return true;</span>
+            }
+        }
+<span class="nc" id="L57">        return false;</span>
+    }
+    /**
+     * Método remove.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * remove: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public boolean remove(int id) {
+<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        return jugadores.removeIf(j -&gt; j.getId() == id);</span>
+    }
+    /**
+     * Método getAll.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getAll: Descripción general del método.
+     */
+    public List&lt;JugadorPersistente&gt; getAll() {
+<span class="nc" id="L80">        return jugadores;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang=""><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GestionJugadores.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">2</a> &gt; <a href="index.source.html" class="el_package">bbdd</a> &gt; <span class="el_source">GestionJugadores.java</span></div><h1>GestionJugadores.java</h1><pre class="source lang-java linenums">package bbdd;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class GestionJugadores {
+    private List&lt;Jugador&gt; jugadores;
+
+<span class="fc" id="L9">    public GestionJugadores() {</span>
+<span class="fc" id="L10">        jugadores = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L11">    }</span>
+
+    // Obtener jugador por posición en la lista
+    /**
+     * Método get.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * get: Descripción general del método.
+ * @param posicion Descripción del parámetro posicion.
+     */
+    public Jugador get(int posicion) {
+<span class="nc bnc" id="L24" title="All 4 branches missed.">        if (posicion &gt;= 0 &amp;&amp; posicion &lt; jugadores.size()) {</span>
+<span class="nc" id="L25">            return jugadores.get(posicion);</span>
+        }
+<span class="nc" id="L27">        return null;</span>
+    }
+
+    // Obtener jugador por ID
+    /**
+     * Método getById.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getById: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public Jugador getById(int id) {
+<span class="fc bfc" id="L41" title="All 2 branches covered.">        for (Jugador j : jugadores) {</span>
+<span class="pc bpc" id="L42" title="1 of 2 branches missed.">            if (j.getId() == id) return j;</span>
+<span class="nc" id="L43">        }</span>
+<span class="fc" id="L44">        return null;</span>
+    }
+
+    // Añadir jugador (solo si el ID no existe ya)
+    /**
+     * Método add.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * add: Descripción general del método.
+ * @param jugador Descripción del parámetro jugador.
+     */
+    public boolean add(Jugador jugador) {
+<span class="fc bfc" id="L58" title="All 2 branches covered.">        if (getById(jugador.getId()) != null) return false;</span>
+<span class="fc" id="L59">        jugadores.add(jugador);</span>
+<span class="fc" id="L60">        return true;</span>
+    }
+
+    // Sustituir jugador por otro con el mismo ID
+    /**
+     * Método replace.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * replace: Descripción general del método.
+ * @param jugador Descripción del parámetro jugador.
+     */
+    public boolean replace(Jugador jugador) {
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">        for (int i = 0; i &lt; jugadores.size(); i++) {</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">            if (jugadores.get(i).getId() == jugador.getId()) {</span>
+<span class="fc" id="L76">                jugadores.set(i, jugador);</span>
+<span class="fc" id="L77">                return true;</span>
+            }
+        }
+<span class="nc" id="L80">        return false;</span>
+    }
+
+    // Eliminar jugador por objeto
+    /**
+     * Método remove.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * remove: Descripción general del método.
+ * @param jugador Descripción del parámetro jugador.
+     */
+    public boolean remove(Jugador jugador) {
+<span class="nc" id="L94">        return jugadores.remove(jugador);</span>
+    }
+
+    // Eliminar jugador por ID
+    /**
+     * Método remove.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * remove: Descripción general del método.
+ * @param id Descripción del parámetro id.
+     */
+    public boolean remove(int id) {
+<span class="pc bpc" id="L108" title="1 of 2 branches missed.">        return jugadores.removeIf(j -&gt; j.getId() == id);</span>
+    }
+
+    // Método auxiliar para ver la lista (opcional)
+    /**
+     * Método getTodos.
+     * 
+     * TODO: Describe lo que hace este método.
+     */
+    /**
+     * getTodos: Descripción general del método.
+     */
+    public List&lt;Jugador&gt; getTodos() {
+<span class="nc" id="L121">        return jugadores;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

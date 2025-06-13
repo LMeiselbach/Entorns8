@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: bbdd.EntidadTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.04 s - in bbdd.EntidadTest
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.07 s - in bbdd.EntidadTest
